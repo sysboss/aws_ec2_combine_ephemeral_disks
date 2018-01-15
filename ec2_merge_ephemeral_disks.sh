@@ -19,7 +19,7 @@ if [[ $(id -u) -ne 0 ]]; then
 fi
 
 # Verify all required tools installed
-TOOLS="curl partprobe"
+TOOLS="curl partprobe mdadm"
 for i in ${TOOLS}; do
     if ! which $i > /dev/null; then
         echo "$i is required."
